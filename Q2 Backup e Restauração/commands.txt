@@ -1,0 +1,2 @@
+LightOnCommand
+LightOffCommand
