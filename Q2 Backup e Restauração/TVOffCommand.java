@@ -1,23 +1,23 @@
-public class LightOffCommand implements Command {
-    private Light light;
+public class TVOffCommand implements Command {
+    private TV tv;
 
-    public LightOffCommand(Light light) {
-        this.light = light;
+    public TVOffCommand(TV tv) {
+        this.tv = tv;
     }
 
     @Override
     public void execute() {
-        light.off();
+        tv.off();
     }
 
     @Override
     public void undo() {
-        light.on();
+        tv.on();
     }
 
     @Override
     public String store() {
-        return "LightOffCommand";
+        return "TVOffCommand";
     }
 
     @Override

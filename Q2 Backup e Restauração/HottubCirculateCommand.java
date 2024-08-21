@@ -1,23 +1,23 @@
-public class LightOffCommand implements Command {
-    private Light light;
+public class HottubCirculateCommand implements Command {
+    private Hottub hottub;
 
-    public LightOffCommand(Light light) {
-        this.light = light;
+    public HottubCirculateCommand(Hottub hottub) {
+        this.hottub = hottub;
     }
 
     @Override
     public void execute() {
-        light.off();
+        hottub.circulate();
     }
 
     @Override
     public void undo() {
-        light.on();
+        hottub.jetsOff();
     }
 
     @Override
     public String store() {
-        return "LightOffCommand";
+        return "HottubCirculateCommand";
     }
 
     @Override

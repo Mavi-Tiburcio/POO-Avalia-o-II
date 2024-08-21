@@ -1,23 +1,23 @@
-public class LightOffCommand implements Command {
-    private Light light;
+public class SoundOnCommand implements Command {
+    private Sound sound;
 
-    public LightOffCommand(Light light) {
-        this.light = light;
+    public SoundOnCommand(Sound sound) {
+        this.sound = sound;
     }
 
     @Override
     public void execute() {
-        light.off();
+        sound.on();
     }
 
     @Override
     public void undo() {
-        light.on();
+        sound.off();
     }
 
     @Override
     public String store() {
-        return "LightOffCommand";
+        return "SoundOnCommand";
     }
 
     @Override
